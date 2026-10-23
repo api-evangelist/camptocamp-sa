@@ -1,0 +1,68 @@
+generated: '2026-10-23'
+method: derived
+source: the pre-flight dossier, apis.yml pointers, spec servers, well-known, vendors -- nothing fetched here
+generator: derive-hosts.py
+summary:
+  hosts: 5
+  own: 4
+  other_domain: 0
+  platform: 1
+  roles:
+  - api
+  - other
+  - source
+  - support
+  - website
+hosts:
+- host: api.camptocamp.com
+  found_by:
+  - contract-discovery
+  types: []
+  serves: []
+  registrable_domain: camptocamp.com
+  role: api
+  relation: own
+- host: camptocamp.com
+  found_by:
+  - pointer
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types:
+  - Security
+  - Website
+  serves: []
+  registrable_domain: camptocamp.com
+  role: website
+  relation: own
+- host: github.com
+  found_by:
+  - pointer
+  types:
+  - GitHubOrganization
+  serves: []
+  registrable_domain: github.com
+  role: source
+  relation: platform
+- host: support.run.camptocamp.com
+  found_by:
+  - probed
+  - site-links
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: camptocamp.com
+  role: support
+  relation: own
+- host: www.camptocamp.com
+  found_by:
+  - probed
+  - contract-discovery
+  - well-known
+  types: []
+  serves: []
+  registrable_domain: camptocamp.com
+  role: other
+  relation: own
